@@ -1,12 +1,8 @@
-localResizeIMG2.0 是基于 [localResizeIMG](https://github.com/think2011/localResizeIMG) 更新的。
+### 
+稍晚点补充文档。
 
+localResizeIMG2.0 是基于 [localResizeIMG](https://github.com/think2011/localResizeIMG)。
 
-## 更新了这些 2.0.0
-1. 用原生js规范的重写代码，不依赖第三方库（定制性高）。
-2. 支持angular
-3. 改用原生上传控件，兼容性100%
-4. 增加操作界面
-5. 方便的调用方式
 
 ## 未来计划
 * 补充文档
@@ -17,5 +13,14 @@ localResizeIMG2.0 是基于 [localResizeIMG](https://github.com/think2011/localR
 * 支持GIF压缩
 * 支持进度显示
 
+
+## 更新 2.0.0
+1. 用原生js规范的重写代码，不依赖第三方库（定制性高）。
+2. 支持angular
+3. 改用原生上传控件，兼容性100%
+4. 增加操作界面
+5. 方便的调用方式
+
+
 ## 最后
-感谢各位的关注和反馈。
+感谢各位的关注和反馈。：D
