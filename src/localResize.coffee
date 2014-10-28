@@ -1,3 +1,11 @@
+###*
+ *  LocalResize
+ * @param {Object} el 原生的dom元素
+ * @param {Object} options={} 可选项
+ * @param {number} options.rWidth=800 压缩图片的宽度，高度会跟随适应。
+ * @param {number} options.quality=0.7 压缩质量,取值 0-1
+ * @param {boolean} options.UI 是否需要内置操作界面
+###
 class LocalResize
   constructor: (el, options = {}) ->
     unless el then return console.error '需要传入一个dom元素'
@@ -17,44 +25,62 @@ class LocalResize
     @_init()
 
 
-  # 设置预览图片
+  ###*
+   * 设置预览图片
+   * @param {string} url 
+  ###
   setImg: (url) ->
     @UI.setImg url
     return @
 
 
-  # 设置预览图片-无删除图标
+  ###*
+   * 设置预览图片-无删除图标
+   * @param {string} url 
+  ###
   setImgOnly: (url) ->
     @UI.setImgOnly url
     return @
 
 
-  # 设置停止转动
+  ###*
+   * @description 停止加载状态，通常在ajax完成后调用。
+  ###
   setStop: ->
     @UI.setSuccess()
     return @
 
 
-  # 恢复初始状态
+  ###*
+   * 恢复初始状态
+  ###
   reset: ->
     @results = {}
     @UI.reset()
     return @
 
 
-  # change回调
+  ###*
+   * change回调
+   * @param  {function} fn 
+  ###
   change: (fn) ->
     if typeof fn is 'function' then @change = fn
     return @
 
 
-  # success回调
+  ###*
+   * success回调
+   * @param  {function} fn 
+  ###
   success: (fn) ->
     if typeof fn is 'function' then @success = fn
     return @
 
 
-  # 初始化样式
+  ###*
+   * 初始化样式
+  ###
   _initStyle: ->
     css = """
         .lr {
@@ -79,7 +105,9 @@ class LocalResize
     LocalResize::_initStyle = -> return true
 
 
-  # 生成元素
+  ###*
+   * 生成元素
+  ###
   _createEl: ->
     # 生成基本样式
     @el.classList.add 'lr'
@@ -93,7 +121,9 @@ class LocalResize
     @el.appendChild @file
 
 
-  # 获取base64
+  ###*
+   * 获取base64
+  ###
   _getBase64: ->
     # 监听变化
     @file.addEventListener 'change', ->
