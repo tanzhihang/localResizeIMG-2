@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>上传图片</title>
+</head>
+<body ng-controller="appCtrl">
+
+
+<l-r-img ng-model="img.a"></l-r-img>
+
+<br/>
+<l-r-img ng-model="img.b"></l-r-img>
+
+{{img}}
+<script src="libs/jquery.min.js"></script>
+<script src="libs/angular.min.js"></script>
+<script src="libs/mobileBUGFix.mini.js"></script>
+
+<script src="localResize.ui.js"></script>
+<script src="localResize.js"></script>
+<script src="localResize.angular.js"></script>
+<script src="localResize.jquery.js"></script>
+
+
+<script>
+
+    var app = angular.module('app', ['localResizeIMG']);
+
+    app.controller('appCtrl', function ($scope) {
+
+    });
+
+    angular.bootstrap(document, ['app']);
+
+</script>
+</body>
+</html>
