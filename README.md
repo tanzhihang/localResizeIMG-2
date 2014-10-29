@@ -17,19 +17,8 @@
 * 支持jquery（即将）
 * 支持angular
 
-## 展示一个angular的例子
-```
-  	// 1. html
-	<script src="localResize.angular.mobile.min.js"></script>
-    <l-r-img success="success" ng-model="img"></l-r-img>
-
-    // 2. javascript
-    var app = angular.module('app', ['localResizeIMG']);
-    $scope.success = function(stop){ stop() }
-
-    // 3. 完成
-```
-jquery\angualr\原生javascript使用文档，[看这里](https://github.com/think2011/localResizeIMG-2/wiki)。
+## 简单的API
+jquery、angualr、原生javascript使用文档，[看这里](https://github.com/think2011/localResizeIMG-2/wiki)。
 
 
 ## 未来计划
@@ -48,3 +37,9 @@ jquery\angualr\原生javascript使用文档，[看这里](https://github.com/thi
 
 ## 最后
 感谢各位的关注和反馈。：D
+
+---
+> ##### 时间： 2014年10月
+> ##### 演示： [演示主页](http://think2011.github.io/localResizeIMG-2/)
+> ##### 源码： [localResizeIMG-2](https://github.com/think2011/localResizeIMG-2)
+> ##### 博客： [think2011](http://think2011.github.io)
