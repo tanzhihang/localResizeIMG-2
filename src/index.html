@@ -8,12 +8,12 @@
 <body ng-controller="appCtrl">
 
 
-<l-r-img ng-model="img.a"></l-r-img>
+<l-r-img success="ok" ng-model="img.a"></l-r-img>
 
 <br/>
-<l-r-img ng-model="img.b"></l-r-img>
+<br/>
+<l-r-img data-title="我有标题噢"  success="ok" ng-model="img.b"></l-r-img>
 
-{{img}}
 <script src="libs/jquery.min.js"></script>
 <script src="libs/angular.min.js"></script>
 <script src="libs/mobileBUGFix.mini.js"></script>
@@ -29,7 +29,11 @@
     var app = angular.module('app', ['localResizeIMG']);
 
     app.controller('appCtrl', function ($scope) {
-
+		$scope.ok = function (stop) {
+			setTimeout(function () {
+					stop()
+			}, 1000);
+		}	
     });
 
     angular.bootstrap(document, ['app']);
