@@ -1,5 +1,6 @@
 ###*
  *  LocalResize
+ * @class
  * @param {Object} el 原生的dom元素
  * @param {Object} options={} 可选项
  * @param {number} options.rWidth=800 压缩图片的宽度，高度会跟随适应。
@@ -71,7 +72,15 @@ class LocalResize
 
   ###*
    * success回调
-   * @param  {function} fn 
+   *
+   * @example
+   * lr.success(function(stop, data{});
+   * 
+   * @param {function} stop 停止加载状态
+   * @param {function} data data.base64 生成好的base64文件
+   *                        data.base64Clean 清除头信息的base64，方便后端存为图片
+   *                        data.original 原始文件的信息，例如type name size
+   * 
   ###
   success: (fn) ->
     if typeof fn is 'function' then @success = fn
