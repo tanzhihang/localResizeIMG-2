@@ -2,14 +2,35 @@
 
 > localResizeIMG2 是基于 [localResizeIMG](https://github.com/think2011/localResizeIMG)。
 
-## 这个是用来..
+## 演示一下
+![demo](http://think2011.github.io/localResizeIMG-2/demo/demo.gif)
+
+## 再试一下
+[一点就试!](http://think2011.github.io/localResizeIMG-2/demo/)
+
+## 然后解释
 * 解决mobile端客户拍摄上传图片，图片容量过大的问题，当然，PC端也可以使用。
 * 此插件在用户选择图片后，将图片进行压缩，方便传到后端处理。
 
 ## 兼容
 * 无依赖，支持原生JS使用，适合想要的定制的朋友。
-* 支持angular
 * 支持jquery（即将）
+* 支持angular
+
+## 展示一个angular的例子
+```
+  	// 1. html
+	<script src="localResize.angular.mobile.min.js"></script>
+    <l-r-img success="success" ng-model="img"></l-r-img>
+
+    // 2. javascript
+    var app = angular.module('app', ['localResizeIMG']);
+    $scope.success = function(stop){ stop() }
+
+    // 3. 完成
+```
+jquery\angualr\原生javascript使用文档，[看这里](https://github.com/think2011/localResizeIMG-2/wiki)。
+
 
 ## 未来计划
 * 支持jquery
