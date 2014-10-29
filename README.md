@@ -1,5 +1,3 @@
-# 稍晚点补充文档。
-
 > localResizeIMG2 是基于 [localResizeIMG](https://github.com/think2011/localResizeIMG)。
 
 ## 演示一下
