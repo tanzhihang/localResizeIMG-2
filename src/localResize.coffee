@@ -20,7 +20,7 @@ class LocalResize
 
 
     for k, v of options
-      if v then @defaults[k] = v
+      if v != undefined && v != null then @defaults[k] = v
 
 
     @_init()
